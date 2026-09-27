@@ -35,7 +35,7 @@ class UptimeBuddyTests(unittest.TestCase):
     def test_check_url_function_up(self):
         """check_url() should correctly identify a working site as UP"""
         status, code, resp_time = check_url("https://www.google.com")
-        self.assertEqual(status, "UP")
+        self.assertEqual(status, "WRONG_VALUE")
         self.assertEqual(code, 200)
 
     def test_check_url_function_down(self):
